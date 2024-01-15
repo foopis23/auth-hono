@@ -7,25 +7,25 @@ Auth Hono is the unofficial Hono integration for Auth.js. It providers a simple 
 ### npm
 
 ```bash
-npm install auth-hono
+npm install @foopis23/auth-hono
 ```
 
 ### yarn
 
 ```bash
-yarn add auth-hono
+yarn add @foopis23/auth-hono
 ```
 
 ### pnpm
 
 ```bash
-pnpm add auth-hono
+pnpm add @foopis23/auth-hono
 ```
 
 ### bun
 
 ```bash
-bun install auth-hono
+bun install @foopis23/auth-hono
 ```
 
 ## Usage
@@ -33,9 +33,8 @@ bun install auth-hono
 ```ts
 // #src/index.ts
 import { Hono } from "hono";
-import { HonoAuth, getSession, GetSessionResult, AuthConfig } from "./auth";
+import { HonoAuth, getSession, GetSessionResult, AuthConfig } from "@foopis23/auth-hono";
 import { RequestContext } from "./types";
-import authConfig from "./auth.config";
 
 type RequestContext = {
   Variables: {
