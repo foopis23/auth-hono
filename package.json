@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Authentication for Hono",
   "main": "dist/index.js",
+  "private": false,
   "scripts": {
     "build": "tsc",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --config ./jest.config.cjs",
