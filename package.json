@@ -1,6 +1,6 @@
 {
   "name": "@foopis23/auth-hono",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Authentication for Hono",
   "main": "dist/index.js",
   "private": false,
