@@ -1,11 +1,12 @@
 {
-  "name": "auth-framework-hono",
+  "name": "@foopis23/auth-hono",
   "version": "1.0.0",
   "description": "Authentication for Hono",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config ./jest.config.cjs"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config ./jest.config.cjs",
+    "pack:preview": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
   },
   "keywords": [
     "@auth/hono",
@@ -33,5 +34,8 @@
   "dependencies": {
     "@auth/core": "^0.20.0"
   },
-  "repository": "https//github.com/foopis23/auth-hono.git"
+  "repository": "https://github.com/foopis23/auth-hono",
+  "files": [
+    "/dist"
+  ]
 }
