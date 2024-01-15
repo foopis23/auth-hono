@@ -33,7 +33,12 @@ bun install @foopis23/auth-hono
 ```ts
 // #src/index.ts
 import { Hono } from "hono";
-import { HonoAuth, getSession, GetSessionResult, AuthConfig } from "@foopis23/auth-hono";
+import {
+  HonoAuth,
+  getSession,
+  GetSessionResult,
+  AuthConfig,
+} from "@foopis23/auth-hono";
 import { RequestContext } from "./types";
 
 type RequestContext = {
@@ -85,12 +90,12 @@ app.get("/", (c) => {
   const session = c.get("session");
 
   c.html(
-		<html>
-			<body>
-				<p>Hello ${session?.user?.name}</p>
-			</body>
-		</html>
-	);
+    <html>
+      <body>
+        <p>Hello ${session?.user?.name}</p>
+      </body>
+    </html>
+  );
 });
 ```
 
@@ -102,12 +107,12 @@ You can protect routes by checking for the presence of a session and then redire
 // #src/middleware.ts
 
 export authenticatedUser : MiddlewareHandler<RequestContext> = function (c, next) {
-	const session = c.get("session");
-	if (!session) {
-		c.redirect("/login");
-		return;
-	}
-	return next();
+  const session = c.get("session");
+  if (!session) {
+    c.redirect("/login");
+    return;
+  }
+  return next();
 };
 ```
 
@@ -119,13 +124,13 @@ export authenticatedUser : MiddlewareHandler<RequestContext> = function (c, next
 import { authenticatedUser } from "./middleware";
 import { RequestContext } from "./types";
 
-const protectedRouter = new Hono<RequestContext>(); 
+const protectedRouter = new Hono<RequestContext>();
 
 protectedRouter.use(authenticatedUser); // all routes after this will be protected
 
-protectedRouter.get('/', (c) => {
-	c.text('protected');
-})
+protectedRouter.get("/", (c) => {
+  c.text("protected");
+});
 
 export default protectedRouter;
 ```
@@ -152,8 +157,10 @@ app.get("/protected", (c) => {
 ```
 
 ## See Also
+
 - [Auth.js](https://authjs.dev)
 - [Hono](https://hono.dev)
 
 ## Credits
+
 This was based on the [Express Auth](https://authjs.dev/reference/express) package by Rexford Essilfie.
