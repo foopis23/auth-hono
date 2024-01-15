@@ -21,7 +21,7 @@
   "author": "Eric Sexton <eric.t.sexton@gmail.com>",
   "license": "ISC",
   "peerDependencies": {
-    "hono": "^3.12.3"
+    "hono": "3.x"
   },
   "devDependencies": {
     "jest": "^29.7.0",
