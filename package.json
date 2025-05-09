@@ -26,15 +26,15 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
-    "@types/jest": "^29.5.7",
-    "@jest/globals": "^29.6.3",
-    "@types/node": "^20.11.0",
-    "hono": "^3.12.4",
+    "@types/jest": "^29.5.14",
+    "@jest/globals": "^29.7.0",
+    "@types/node": "^20.17.46",
+    "hono": "^3.12.12",
     "ts-jest": "29.0.0-next.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@auth/core": "^0.20.0"
+    "@auth/core": "^0.39.0"
   },
   "repository": "https://github.com/foopis23/auth-hono",
   "files": [
