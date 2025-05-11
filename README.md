@@ -1,3 +1,6 @@
+Just go use this now:
+https://www.npmjs.com/package/@hono/auth-js
+
 # auth-hono
 
 Auth Hono is the unofficial Hono integration for Auth.js. It providers a simple way to add authentication to your Hono app in a few lines of code.
